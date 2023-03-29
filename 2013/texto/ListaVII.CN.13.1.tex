@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios VII}
+\end{center}
+
+% \begin{flushleft}
+%  \textbf{Observação}
+% 
+%  Nesta lista de exercícios, todos os sistemas de equações devem ser resolvidos por Eliminação Gaussiana.
+% \end{flushleft}
+
+\begin{enumerate}
+  
+  \item Seja uma função $f$ da qual são conhecidos os valores descritos na tabela abaixo.
+%p(x) = x^3 - x^2 + 2
+\begin{center}
+ \begin{tabular}{c|c|c|c|c}
+  $x_i$ & 1 & 1,5 & 2 & 2,5\\ \hline
+  $f(x_i)$ & 2 & 3,125 & 6 & 11,375
+ \end{tabular}
+\end{center}
+
+  Determine o polinômio $p$ que interpola $f$ utilizando três maneiras:
+  \begin{enumerate}
+   \item resolvendo o sistema formado pelas equações $p(x_i) = f(x_i)$;
+   \item escrevendo $p$ na Forma de Lagrange;
+   \item escrevendo $p$ na Forma de Newton.
+  \end{enumerate}
+
+  \item Seja $p$ o polinômio na Forma de Lagrange que interpola os pontos $(x_0,\,y_0)$, $(x_1,\,y_1)$, \ldots, $(x_n,\,y_n)$. Vamos definir o 
+polinômio $$q(x) = \prod_{i=0}^{n} (x-x_i).$$ Prove que $p$ pode ser escrito no seguinte formato: 
+$$p(x) = \sum_{i=0}^n\frac{q(x)}{(x-x_i)q'(x_i)}y_i.$$
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} (a) $p(x) = x^3 - x^2 + 2$ (b) $p(x) = -\dfrac{8}{3}(x-1,5)(x-2)(x-2,5) + \dfrac{25}{2}(x-1)(x-2)(x-2,5) 
+- 24(x-1)(x-1,5)(x-2,5) + \dfrac{91}{6}(x-1)(x-1,5)(x-2)$ (c) $p(x) = 2 + \dfrac{9}{4}(x-1) + \dfrac{7}{2}(x-1)(x-1,5) + (x-1)(x-1,5)(x-2)$ 
+\textbf{[2]} Sugestão: Comece justificando que $\dfrac{q(x)}{(x-x_i)}$, para $x\neq x_i$, é o mesmo que $\displaystyle\prod_{k=0,\,k\neq i}^n (x-x_k)$. Em seguida, 
+justifique que $q'(x_i) = \displaystyle\prod_{k=0,\,k\neq i}^n (x_i-x_k)$. 
+\end{document}

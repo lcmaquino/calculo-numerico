@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arc}{arctg}
+
+\newcommand{\limite}[3]{\displaystyle\lim_{#2 \to #3} #1}
+\newcommand{\integral}[4]{\displaystyle\int_{#3}^{#4} #1\,d#2}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof. Me. Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios II}
+\end{center}
+
+\begin{enumerate}
+  \item Explique como obter a expressão para o termo $x_n$ da sequência definida pelo Método das Cordas para uma função $f$ contínua no intervalo $[a;\,b]$ e tal que $f(a)f(b)<0$.
+  
+  \item Considere a função definida por $f(x) = \sen x - \dfrac{1}{5}$. Aplique o Método da Bisseção para 
+determinar uma aproximação da raiz de $f$ no intervalo $[0;\,1]$, com tolerância de $10^{-4}$. Em seguida, 
+aplique o Método das Cordas para também encontrar uma aproximação dessa raiz, considerando o mesmo intervalo e 
+tolerância e usando $x_0=0,5$ como chute inicial. Comparando os dois métodos, houve alguma vantagem 
+em usar o Método das Cordas?
+
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center}
+\textbf{[1]} Sugestão: Primeiro, determine a equação da reta que passa por $(x_n;\,f(x_n))$ e é paralela a reta passando por $(a;\,f(a))$ e $(b;\,f(b))$. Em seguida, 
+defina $x_{n+1}$ como sendo a abscissa do ponto de interseção entre esta reta e o eixo $x$. 
+\textbf{[2]} Método da bisseção: $x\approx 0,201416015625$. Método das Cordas: $x\approx 0,201333044061041$. 
+Comparando os métodos, a vantagem de usar o Método das Cordas foi executar menos passos para obter a aproximação desejada. 
+\end{document}

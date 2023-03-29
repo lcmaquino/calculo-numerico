@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios VI}
+\end{center}
+
+% \begin{flushleft}
+%  \textbf{Observação}
+% 
+%  Nesta lista de exercícios, todos os sistemas de equações devem ser resolvidos por Eliminação Gaussiana.
+% \end{flushleft}
+
+\begin{enumerate}
+  
+  \item Resolva o sistema abaixo utilizando o Método de Eliminação Gaussiana de duas maneiras: com pivoteamento parcial e sem pivoteamento parcial. Para efetuar todas as operações considere que um dispositivo 
+com quatro casas decimais de precisão foi utilizado. Além disso, considere que este dispositivo efetua o método de arredondamento usual. Compare as 
+soluções obtidas usando este dispositivo com a solução exata deste sistema.
+
+  $$%x = -1, y = 1, z = 2.
+   \begin{cases}
+    3x - 5y + z = -6 \\
+    -x + y + 3z = 8 \\
+    -7x + 3y - 6z = -2
+   \end{cases}
+  $$
+
+  \item Efetue a fatoração $LU$ da matriz $A$ dada abaixo de duas maneiras: com pivoteamento parcial e sem pivoteamento parcial. 
+Para efetuar todas as operações considere que um dispositivo com quatro casas decimais de precisão foi utilizado. 
+Além disso, considere que este dispositivo efetua o método de arredondamento usual. Compare os resultados obtidos.
+
+$$A =
+\begin{bmatrix}
+-1 & 0 & 4 \\
+ 2 & 1 & 1 \\
+ 1 & -1 &  2
+\end{bmatrix}
+$$
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} Sugestão: Comente se a solução obtida pelo Método da Eliminação Gaussiana com pivoteamento parcial foi mais próxima da solução exata. 
+Compare o erro de arredondamento ao usar o pivoteamento e ao não usar.
+\textbf{[2]} Sugestão: Comente se a solução obtida com o pivoteamento parcial foi mais próxima da solução exata. 
+Compare o erro de arredondamento ao usar o pivoteamento e ao não usar.
+\end{document}

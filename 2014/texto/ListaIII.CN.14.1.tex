@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios III}
+\end{center}
+
+\begin{enumerate}
+
+ \item Utilize o Método de Newnton para determinar uma aproximação para a raiz da função polinomial definida por $p(x) = 2x^4 -2x^3 -22x^2 - 10x + 8$ no intervalo $[0;\,1]$ (considere uma tolerância 
+ de $10^{-5}$).
+ \item Use o Método da Falsa Posição para encontrar a raiz aproximada da equação $e^{x} - e^{-x} = 2\cos x$ no intervalo $[0;\,1]$ (considere uma tolerância de $10^{-5}$).
+
+  \item A cada passo no Método da Falsa Posição, escolhemos $x_k = \dfrac{a_k|f(b_k)| + b_k|f(a_k)|}{|f(a_k)|+|f(b_k)|}$, sendo que no intervalo $[a_k;\,b_k]$ temos $f(a_k)f(b_k)<0$. Prove que 
+ esta escolha de $x_k$ coincide com a abscissa do ponto de interseção entre o eixo $x$ e a reta passando por $(a_k,\,f(a_k))$ e $(b_k,\,f(b_k))$.
+ 
+ \item Considere o problema de encontrar uma raiz aproximada da equação $e^{-x^2} = \dfrac{1}{2}$ no intervalo $\left[\dfrac{1}{2};\,1\right]$. Determine uma função de iteração e resolva este problema pelo Método do Ponto Fixo.
+ \item Seja $\phi$ uma função de iteração da equação $f(x) = 0$ no intervalo $[a;\, b]$. Prove que se $\phi$ é contínua em $[a;\,b]$ e $\phi(x)\in[a;\,b]$ para 
+ todo $x\in[a;\, b]$, então $\phi$ possui algum ponto fixo em $[a;\,b]$.
+ \item Seja $x$ um número natural qualquer. Considere que $n$ seja um quadrado perfeito mais próximo de $x$. Prove que $\sqrt{x}\approx \dfrac{x+n}{2\sqrt{n}}$. 
+ (Observação: dizemos que $n$ é um quadrado perfeito se existe um natural $m$ tal que $n = m^2$.)
+
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center}
+\textbf{[1]} $x\approx 0.41421$.
+\textbf{[2]} $x\approx 0,70329$. 
+\textbf{[3]} Sugestão: como $f(a_k)f(b_k)<0$, note que 
+$|f(a_k)|+|f(b_k)| = \begin{cases}f(a_k) - f(b_k),\,\textrm{ se }f(a_k) > 0\textrm{ e } f(b_k) < 0\\ -f(a_k) + f(b_k),\,\textrm{ se }f(a_k) < 0\textrm{ e } f(b_k) > 0\end{cases}$. A partir disso, note que 
+$x_k = \dfrac{a_kf(b_k) - b_kf(a_k)}{f(a_k) - f(b_k)}$. Em seguida, determine a interseção entre o eixo $x$ e a reta passando por $(a_k,\,f(a_k))$ e $(b_k,\,f(b_k))$. Por fim, 
+compare a abscissa deste ponto de interseção com a expressão anterior obtida para $x_k$. 
+\textbf{[4]} Considere $\phi(x) = x + e^{-x^2} - \dfrac{1}{2}$. Note que $|\phi'(x)| < 1$ para $x\in\left[\dfrac{1}{2};\,1\right]$. Deste modo, a sequência 
+$x_{n+1}=\phi(x_n)$ é convergente e teremos $x\approx 0,832438$ como solução aproximada da equação dada. 
+\textbf{[5]} Sugestão: Usando que $\phi$ é contínua em $[a;\,b]$, justifique que a função definida por $g(x) = \phi(x) - x$ é contínua em $[a;\,b]$. Já usando que $\phi(x)\in[a;\,b]$ para todo $x\in[a;\,b]$, justifique que $g(a)g(b) < 0$. 
+Aplicando então o Teorema do Valor Intermediário, conclua que existe $\alpha\in[a;\,b]$ tal que $g(\alpha)=0$. A partir disso, conclua que $\phi$ possui algum ponto fixo em $[a;\,b]$. 
+\textbf{[6]} Sugestão: Aplique o Método de Newton na resolução aproximada (em $u$) da equação $u^2 - x = 0$. Use como valor inicial $u_0 = \sqrt{n}$.
+\end{document}

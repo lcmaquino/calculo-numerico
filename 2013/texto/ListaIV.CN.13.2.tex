@@ -1,0 +1,143 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios IV}
+\end{center}
+
+\textbf{Observação:} Nos exercícios 1 e 2 use o Método de Eliminação Gaussiana para resolver o sistema de equações.
+
+\begin{enumerate}
+  \item Um fabricante de móveis produz cadeiras, mesinhas de centro e mesas
+de jantar. Cada cadeira leva 10 minutos para ser lixada, 6 minutos
+para ser tingida e 12 minutos para ser envernizada. Cada mesinha de
+centro leva 12 minutos para ser lixada, 8 minutos para ser tingida
+e 12 minutos para ser envernizada. Cada mesa de jantar leva 15 minutos
+para ser lixada, 12 minutos para ser tingida e 18 minutos para ser
+envernizada. A bancada para lixar fica disponível 1.340 minutos por
+semana, a bancada para tingir 940 minutos por semana e a bancada para
+envernizar 1.560 minutos por semana. Quantos móveis devem ser fabricados
+(por semana) de cada tipo para que as bancadas sejam plenamente utilizadas?
+
+ \item Considere o problema do circuito hidráulico mostrado na Figura~\ref{fig:tub}. Este sistema está alimentado por um reservatório 
+cuja a pressão é mantida constante e igual a $P_r = 10$. As saídas das tubulações desembocam na atmosfera, onde a pressão é 
+considerada nula (isto é, $P_a = 0$). Deste modo, a vazão $Q_i$ da $i$-ésima tubulação depende da diferença de pressão $\Delta P_i$ 
+de tal modo que $$Q_i = K_iL_i\Delta P_i,$$ onde $K_i$ é a resistência hidráulica e $L_i$ o comprimento da tubulação. Por exemplo, para a 
+tubulação $8$ temos que $Q_8 = K_8L_8\Delta P_8$, sendo que $\Delta P_8 = P_1 - P_4$ (ou seja, a pressão que ``entra'' na tubulação pela 
+bifurcação $1$ menos a pressão que ``sai'' da tubulação pela bifurcação $4$). Por outro lado, sabe-se que em cada bifurcação a soma das vazões 
+deve ser nula. Por exemplo, na bifurcação $4$ temos que $Q_8 - Q_6 - Q_7 = 0$ (aqui note que a vazão que ``entra'' na bifurcação é considerada positiva, 
+enquanto que a que ``sai'' é considerada negativa). Considerando essas informações e os dados da Tabela~\ref{tab:dados}, determine as vazões em cada tubulação e as pressões 
+em cada bifurcação.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.75]{imagem/Tubulacao.png}
+ \caption{Esquema do circuito hidráulico.}
+ \label{fig:tub}
+\end{figure}
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{c|c|c}
+  Tubulação $i$ & $K_i$ & $L_i$ \\ \hline
+  1 & 0,02 & 1,0 \\ \hline
+  2 & 0,005 & 2,0 \\ \hline
+  3 & 0,085 & 0,5 \\ \hline
+  4 & 0,02 & 1,0 \\ \hline
+  5 & 0,075 & 0,5 \\ \hline
+  6 & 0,085 & 0,5 \\ \hline
+  7 & 0,015 & 2,0 \\ \hline
+  8 & 0,01 & 1,0 
+ \end{tabular}
+ \caption{Resistência hidráulica e comprimento das tubulações.}
+ \label{tab:dados}
+\end{table}
+ 
+  \item Pesquise uma maneira de adaptar o Método de Eliminação Gaussiana para calcular o determinante de uma matriz. Em seguida, use este método para calcular 
+o determinante da matriz:
+$$A=\begin{bmatrix}3 & - 5 & 1 \\ -1 & 1 & 3 \\ -7 & 3 & -6\end{bmatrix}.$$
+
+  \item Considere as matrizes:
+$$A=\begin{bmatrix}1 & - 1 & 2 \\ 3 & 7 & -4 \\ 5 & -2 & 1\end{bmatrix}, \, 
+x=\begin{bmatrix}x_1 \\ x_2 \\ x_3\end{bmatrix}, \, 
+b=\begin{bmatrix}-2 \\ 1 \\ 5\end{bmatrix} \textrm{ e }\,
+c=\begin{bmatrix}1 \\ -1 \\ 3\end{bmatrix}. 
+$$
+
+  \begin{enumerate}
+    \item Determine a fatoração $LU$ de $A$.
+    \item Use a fatoração do item anterior para resolver os sistemas $Ax = b$ e $Ax = c$.
+  \end{enumerate}
+
+  \item Suponha que uma matriz $A$ foi fatorada no formato $LU$ (sem utilizar pivoteamento). Preencha os espaços em branco abaixo de modo a determinar 
+as matrizes $A$, $L$ e $U$.
+
+$$
+A=\begin{bmatrix}\square & \square & \square \\ 1 & 0 & \square \\ \square & -4 & -3\end{bmatrix};\quad
+L=\begin{bmatrix}1 & 0 & 0 \\ \square & 1 & 0 \\ -5 & \square & 1\end{bmatrix};\quad
+U=\begin{bmatrix}-2 & \square & 4 \\ 0 & \square & 3 \\ 0 & 0 & -1\end{bmatrix}
+$$
+
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} $50$ cadeiras, $20$ mesinhas de centro e $40$ mesas de jantar. 
+\textbf{[2]} $P_1 = 5,47246730738932$, $P_2 = 0,919331967858831$, $P_3 = 0,596344729793603$, $P_4 = 0,970537261698440$. 
+$Q_1 = 0,0905506538522137$, $Q_2 = 0,0455313533953049$, $Q_3 = 0,0390716086340003$, $Q_4 = 0,00645974476130455$, 
+$Q_5 = 0,0223629273672601$, \\ $Q_6 = 0,0159031826059556$, $Q_7 = 0,0291161178509532$, $Q_8 = 0,0450193004569088$.
+\textbf{[3]} $\det A = 94$.
+\textbf{[4]} (a) $L = \begin{bmatrix}1 & 0 & 0 \\ 3 & 1 & 0 \\ 5 & \frac{3}{10} & 1\end{bmatrix}$ e 
+$U = \begin{bmatrix} 1 & -1 & 2 \\ 0 & 10 & -10 \\ 0 & 0 & -6 \end{bmatrix}$. 
+(b) $x = 
+\begin{bmatrix}
+\frac{17}{20} \\
+-\frac{29}{20} \\
+-\frac{43}{20}
+\end{bmatrix}
+$. 
+$x = 
+\begin{bmatrix}
+\frac{7}{15} \\
+-\frac{4}{15} \\
+\frac{2}{15}
+\end{bmatrix}
+$. 
+\textbf{[5]} $A = \begin{bmatrix}-2 & 2 & 4 \\ 1 & 0 & 1\\ 10 & -4 & -3\end{bmatrix}$, 
+$L = \begin{bmatrix}1 & 0 & 0 \\ -\frac{1}{2} & 1 & 0 \\ -5 & 6 & 1\end{bmatrix}$ e  
+$U = \begin{bmatrix}-2 & 2 & 4 \\ 0 & 1 & 3 \\ 0 & 0 & -1\end{bmatrix}$
+\end{document}

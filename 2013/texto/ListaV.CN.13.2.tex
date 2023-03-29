@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios V}
+\end{center}
+
+\begin{enumerate}
+  
+  \item Considere o seguinte sistema de equações:
+  $$%x = -1, y = 1, z = 2.
+   \begin{cases}
+    2x - 4y + 8z  - w = -6 \\
+    -2x  - 2y + z - 7w = -5 \\
+    5x  - y + z - 2w = -2 \\
+    x - 4y - z + w = 8
+   \end{cases}
+  $$
+
+  \begin{enumerate}
+   \item Da forma como ele está arrumado, é recomendável usar diretamente o método de Gauss-Jaboci? Justifique sua resposta.
+   \item Proponha uma maneira de utilizar o método de Gauss-Jacobi para obter uma solução aproximada desse sistema (considere uma tolerância de $10^{-5}$). 
+         Justifique a sua proposta.
+  \end{enumerate}
+
+
+  \item Utilize o Método de Gauss-Seidel para resolver o mesmo sistema que você propôs no exercício 1. (b) (considere a mesma tolerância). Houve alguma vantagem em relação ao 
+Método de Gauss-Jacobi?
+
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} (a) Não, pois usando o Critério das Linhas não temos a garantia da convergência. 
+(b) Primeiro, podemos trocar de lugar as colunas um e três. Em seguida, podemos trocar de lugar as linhas dois e quatro. Com esta arrumação,
+podemos garantir pelo Critério das Linhas que o método de Gauss-Jacobi será convergente. Utilizando então o chute inicial $z^{(0)} = -\frac{6}{8}$, 
+$y^{(0)} = -2$, $x^{(0)} = -\frac{2}{5}$ e $w^{(0)} = \frac{5}{7}$, obtemos como solução $z \approx -1,3408269471$, $y \approx -1,4387214857$, 
+$x\approx -0,0413311135$ e $w\approx 0,9456141095$. 
+\textbf{[2]} Utilizando o mesmo chute inicial de 1. (b), obtemos $z \approx -1,3408296817$, $y \approx -1,4387216809$, 
+$x\approx -0,0413335297$ e $w\approx 0,9456115342$. A vantagem em relação ao método anterior foi a redução do número de passos para atingir a 
+tolerância desejada.
+
+\end{document}

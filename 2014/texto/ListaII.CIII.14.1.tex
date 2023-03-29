@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arctg}{arctg}
+\newcommand{\limite}[3]{\displaystyle\lim_{#2 \to #3} #1}
+\newcommand{\integral}[4]{\displaystyle\int_{#3}^{#4} #1\,d#2}
+\newcommand{\parcial}[2]{\dfrac{\partial #1}{\partial #2}}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.35]{../../biblioteca/imagem/logo-ead} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Diretoria de Educação Aberta e a Distância - DEaD \\
+Disciplina: Cálculo Diferencial e Integral II\\
+Prof.: Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios II}
+\end{center}
+
+\begin{enumerate}
+
+\item Considerando $f(x,\,y,\,z) = \dfrac{y}{zx^2 + 1} - (z + x)\left(y^2 - z^2\right)$, calcule:
+
+\begin{tabular}{lll}
+ (a) $\dfrac{\partial f}{\partial x}$. & (b) $\dfrac{\partial f}{\partial y}$. & (c) $\dfrac{\partial f}{\partial z}$.
+\end{tabular}
+
+\item Determine o plano tangente ao gráfico das funções abaixo nos pontos indicados...
+
+\item Calcule uma aproximação do número $\sqrt{17} + \sqrt[3]{7}$ usando um plano tangente ao gráfico da 
+função definida por $f(x,\,y) = \sqrt{x} + \sqrt[3]{y}$.
+
+\item Determine uma parametrização $\alpha(t)$ da curva de nível $c$ da função dada por $f(x,\,y) = \sqrt{x^2 + y^2}$. Em seguida, 
+verifique que $\nabla f(\alpha(t)) \cdot \alpha'(t) = 0$.
+
+\item Se $f(x,\,y,\,z) = \ln\sqrt{x^2 + y^2 + z^2}$ e $u = (x,\,y,\,z)$, verifique que $u\cdot \nabla f(u)= 1$.
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+\textbf{Gabarito}
+\end{center}
+%\dfrac{y}{zx^2 + 1} - (z + x)\left(y^2 - z^2\right)
+\textbf{[1]} (a) $\parcial{f}{x} = -\dfrac{2xyz}{\left(zx^2 + 1\right)^2} - y^2 + z^2$. 
+(b) $\parcial{f}{y} = \dfrac{1}{zx^2 + 1} - 2(x + z)y$. 
+(c) $\parcial{f}{z} = - \dfrac{x^2y}{\left(zx^2 + 1\right)^2} - y^2 + z^2 + 2z(x + z)$. 
+
+\textbf{[2]} 
+\textbf{[3]} 
+\textbf{[4]}  
+\textbf{[5]} 
+\textbf{[6]} 
+\textbf{[7]} 
+\textbf{[8]} Sugestão: lembre-se que $(x,\,y,\,z)\cdot \left(\parcial{f}{x},\,\parcial{f}{y},\,\parcial{f}{z}\right) = x\parcial{f}{x} + y\parcial{f}{y} + z\parcial{f}{z}$. 
+\end{document}

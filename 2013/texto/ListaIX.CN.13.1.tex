@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios IX}
+\end{center}
+
+\begin{enumerate}
+  
+  \item Considere os polinômios:
+$$p_0(x) = 1;\, p_1(x) = x;\,p_2(x) = \frac{1}{2}(3x^2 - 1).$$
+
+
+   \begin{enumerate}
+    \item Verifique que $\displaystyle\int_{-1}^1 p_i(x)p_j(x)\,dx = 0$, sempre que $i\neq j$.
+    \item Utilize o Método dos Mínimos Quadrados para determinar $\phi(x) = a_0p_0(x) + a_1p_1(x) + a_2p_2(x)$ que melhor se ajusta a função definida por 
+          $f(x) = \left(x - \dfrac{1}{2}\right)^4$ no intervalo $[-1,\, 1]$.
+   \end{enumerate}
+
+
+  \item Considere uma função $f$ da qual são conhecidos os seguintes pontos:
+
+   \begin{center}
+   \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+      $x_i$ & $-4,5$ & $-3,2$ & $-1,8$ & $-0,9$ & $0$ & $0,8$ & $2,1$ & $2,9$ & $3,8$ & $4,5$\\ \hline
+      $f(x_i)$ & $3,53$ & $2,26$ & $1,03$ & $1,16$ & $0,45$ & $0,34$ & $0,46$ & $0,09$ & $0,12$ & $0,2$
+   \end{tabular}
+   \end{center}
+
+   \begin{enumerate}
+    \item Faça um esboço desses pontos no plano cartesiano. A partir desse esboço, verifique que uma função do tipo $\phi(x) = a_1e^{-a_2x}$ pode ser 
+viável para ajustar $f(x)$.
+    \item Utilize o Método dos Mínimos Quadrados com uma linearização adequada para ajustar $f$ por $\phi$.
+   \end{enumerate}
+  
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} (a) Basta verificar que $\displaystyle\int_{-1}^1 x\,dx=0$, $\displaystyle\int_{-1}^1 \frac{1}{2}(3x^2 - 1)\,dx=0$ e 
+$\displaystyle\int_{-1}^1 \frac{x}{2}(3x^2 - 1)\,dx=0$. (b) $\phi(x) = \dfrac{61}{80}p_0(x) - \dfrac{17}{10}p_1(x) + \dfrac{11}{7}p_2(x)$. 
+\textbf{[2]} (b) $\phi(x) = 0,59844e^{-0,37911x}$.
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios III}
+\end{center}
+
+\begin{enumerate}
+ \item Seja a função polinomial definida por $p(x) = x^4 - 2x^3 + 4x^2 - x + 5$. Utilize o Método de Horner para calcular $p(4)$ e $p'(4)$
+ \item Obtenha a Sequência de Sturm para a função polinomial definida por $p(x) = -x^3 + x^2 - x + 1$.
+ \item Utilize o Método de Newnton para determinar uma aproximação para a raiz da função polinomial definida por $p(x) = 2x^4 -2x^3 -22x^2 - 10x + 8$ no intervalo $[0,\,1]$ (considere uma tolerância 
+ de $10^{-5}$).
+ \item Considere a função polinomial definida por $p(x) = x^3 -\dfrac{7}{4}x^2 - 5x + \dfrac{35}{4}$. Sabe-se que no intervalo $[1,8;\,2,4]$ há uma raiz desta função. 
+ Explique porque não podemos obter uma aproximação desta raiz utilizando o Método de Newnton com chute inicial no intervalo $(1,8;\,2)$. Discuta a viabilidade de usar o Método de Newton na resolução deste problema.
+ \item Utilize um método numérico para determinar aproximadamente qual é o ponto da circunferência $x^2 + y^2 = 1$ que está mais próximo da reta $x + 2y - 4 = 0$.
+ 
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} $b_4 = 1$, $b_3 = 2$, $b_2 = 12$, $b_1 = 47$, $p(4) = b_0 = 193$. $\tilde{b}_3 = 1$, $\tilde{b}_2 = 6$, $\tilde{b}_1 = 36$, $p'(4) = \tilde{b}_0 = 191$. 
+\textbf{[2]} $f_0(x) = -x^3 + x^2 - x + 1$, $f_1(x) = -3x^2 + 2x - 1$, $f_2(x) = \dfrac{4}{9}x-\dfrac{8}{9}$ e $f_3(x) = 9$.
+\textbf{[3]} $x\approx 0,41421$. 
+\textbf{[4]} Sugestão: note que para $x$ no intervalo $(1,8;\,2)$, temos que $p'(x) < 0$ e $p''(x) > 0$. Além disso, note que $p'(2)=0$ e para $x$ no intervalo $(2;\,2,4)$ temos que $p'(x) > 0$ e $p''(x) > 0$.
+\textbf{[5]} $P\approx (0,44721; 0,89443)$. 
+\end{document}

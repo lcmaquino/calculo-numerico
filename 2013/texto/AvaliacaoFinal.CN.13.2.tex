@@ -1,0 +1,96 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+
+Aluno(a): \rule{0.5\textwidth}{0.01cm} \quad Data: \rule{0.6cm}{0.01cm} / \rule{0.6cm}{0.01cm} / \rule{1.25cm}{0.01cm}
+\end{center}
+
+\begin{center}
+ \textbf{Exame Final}
+\end{center}
+
+\textbf{Instruções}
+\begin{itemize}
+ \item Todas as justificativas necessárias na solução de cada questão devem estar presentes nesta avaliação;
+ \item As respostas finais de cada questão devem estar escritas de caneta;
+ \item Esta avaliação tem um total de 100,0 pontos.
+\end{itemize}
+
+\begin{enumerate}
+
+ \item \textbf{[25 pontos]} Dê exemplo de uma equação que envolva termos do tipo $2^u$ e $\sen u$ e cuja solução seja $x = 4$. Em seguida, determine um intervalo 
+contendo $x = 4$ e considere que o Método da Bisseção será aplicado nesse intervalo. Faça uma estimativa do número de passos do método que 
+serão necessários para obter a precisão de $\varepsilon = 10^{-2}$. Execute essa quantidade de passos e compare a solução aproximada com a solução 
+exata da equação.
+
+ \item \textbf{[20 pontos]} Seja $x$ um número natural não nulo qualquer. Considere que $n$ seja um quadrado perfeito mais próximo de $x$. Prove que $\sqrt{x}\approx \dfrac{x+n}{2\sqrt{n}}$. 
+ (Observação: dizemos que $n$ é um quadrado perfeito se existe um natural $m$ tal que $n = m^2$.)
+
+ \item Considere o seguinte sistema de equações:
+  $$%x = -1, y = 1, z = 2.
+   \begin{cases}
+    2x - 4y + 8z  - w = -6 \\
+    -2x  - 2y + z - 7w = -5 \\
+    5x  - y + z - 2w = -2 \\
+    x - 4y - z + w = 8
+   \end{cases}
+  $$
+
+  \begin{enumerate}
+   \item \textbf{[5 pontos]} Da forma como ele está arrumado, é recomendável usar diretamente o método de Gauss-Jaboci? Justifique sua resposta.
+   \item \textbf{[15 pontos]} Arrume esse sistema de modo a utilizar o método de Gauss-Jacobi. Justifique sua arrumação. Em seguida, exiba as equações 
+         utilizadas pelo método para obter uma solução aproximada desse sistema.
+  \end{enumerate}
+ 
+ \item \textbf{[15 pontos]} Seja uma função $f$ da qual são conhecidos os valores descritos na tabela abaixo.
+  \begin{center}
+   \begin{tabular}{c|c|c|c}
+    $x_i$ & 1 & 1,5 & 2\\ \hline
+    $f(x_i)$ & 2 & 3,125 & 6
+   \end{tabular}
+  \end{center}
+
+  Determine o polinômio $p$ que interpola $f$ utilizando duas maneiras:
+  \begin{enumerate}
+   \item escrevendo $p$ na Forma de Lagrange;
+   \item escrevendo $p$ na Forma de Newton.
+  \end{enumerate}
+
+ \item \textbf{[20 pontos]} Utilizando o Método dos Mínimos Quadrados deseja-se determinar $\displaystyle \phi(x) = \sum_{k=0}^n a_kg_k(x)$ que melhor se ajusta 
+a uma função $f$ no intervalo $[a;\, b]$. Suponha que as funções $g_0$, $g_1$, \ldots, $g_n$ sejam escolhidas de tal forma que 
+$\displaystyle\int_a^b g_i(x)g_j(x)\,dx = \begin{cases}1,\,i = j \\ 0,\,i\neq j\end{cases}$. Prove que nesse caso teremos 
+$a_k = \displaystyle\int_a^b f(x)g_k(x)\,dx$.
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios I}
+\end{center}
+
+\begin{enumerate}
+\item Use o Método da Bisseção para encontrar uma solução aproximada das seguintes equações (considere uma tolerância de $10^{-4}$):
+ \begin{enumerate}
+  \item $(3x)2^x = 1$. 
+  \item $\sen 2x = \ln (x - 1)$.
+ \end{enumerate}
+
+ \item Considere a função definida por $f(x) = \dfrac{2x - 3}{x-1}$. Há algum problema em aplicar o Método da Bisseção para determinar uma raiz desta função no intervalo $[0,25;\,1,25]$? Justifique sua resposta.
+
+ \item Dado $a\in\mathbb{R}_+^*$ proponha uma maneira de usar o Método da Bisseção para calcular um valor aproximado de $\sqrt{a}$ com tolerância de $10^{-5}$. Em seguida, use a sua 
+proposta para calcular o valor aproximado de $\sqrt{2}$.
+
+ \item Explique como obter a expressão para o termo $x_n$ da sequência definida pelo Método das Cordas para uma função $f$ contínua no intervalo $[a;\,b]$ e tal que $f(a)f(b)<0$.
+  
+ \item Aplique o Método das Cordas para encontrar uma aproximação da raiz da função definida por $f(x) = \sen x - \dfrac{1}{5}$ no intervalo $[0;\,1]$ (considere uma tolerância de $10^{-4}$).
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center}
+\textbf{[1]} (a) $x\approx 0,27539$. (b) $x\approx 1,7305$. 
+\textbf{[2]} Sim, pois $f$ é descontínua neste intervalo. Em particular, com dois passos do método obtemos $x_2 = 1$, mas $f$ é descontínua em $x = 1$. 
+\textbf{[3]} Sugestão: note que $\sqrt{a}$ é a raiz de $x^2 - a = 0$ no intervalo $[0;\,a+1]$. Observação: este exercício admite outras respostas válidas. 
+\textbf{[4]} Sugestão: Primeiro, determine a equação da reta que passa por $(x_n;\,f(x_n))$ e é paralela a reta passando por $(a;\,f(a))$ e $(b;\,f(b))$. Em seguida, 
+defina $x_{n+1}$ como sendo a abscissa do ponto de interseção entre esta reta e o eixo $x$. 
+\textbf{[5]} $x\approx 0,20133$.
+\end{document}

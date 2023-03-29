@@ -1,0 +1,12 @@
+/*/*.pdf
+/*/texto/*.tex~
+/*/texto/*.aux
+/*/texto/*.log
+/*/texto/*.bak
+/*/texto/*.synctex.gz
+*.m
+*.pdf
+*.zip
+*.rar
+*.gz
+

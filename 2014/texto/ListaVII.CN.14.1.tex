@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios VII}
+\end{center}
+
+\begin{enumerate}
+  
+  \item Determine um \textit{spline} natural cúbica que interpole os pontos da tabela abaixo:
+
+   \begin{center}
+   \begin{tabular}{c|c|c|c|c}
+      $x_i$ & $-1,2$ & $-0,1$ & $0,5$ & $1,4$ \\ \hline
+      $y_i$ & $-1$ & $0,2$ & $0,75$ & $-0,15$
+   \end{tabular}
+   \end{center}
+
+  \item Considere uma função $f$ da qual são conhecidos os seguintes pontos:
+
+   \begin{center}
+   \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+      $x_i$ & $-4,2$ & $-2,8$ & $-2,2$ & $-0,75$ & $0$ & $1,2$ & $1,6$ & $3,5$ & $4$ & $5,2$\\ \hline
+      $f(x_i)$ & $24$ & $15,7$ & $8,8$ & $3,6$ & $1,2$ & $0,6$ & $0,25$ & $4,4$ & $8,2$ & $15,5$
+   \end{tabular}
+   \end{center}
+
+   \begin{enumerate}
+    \item Faça um esboço desses pontos no plano cartesiano. A partir desse esboço, analise qual o grau do polinômio que 
+          parece se ajustar a estes pontos.
+    \item Utilize o Método dos Mínimos Quadrados para determinar o polinômio que melhor se ajusta a estes pontos (considerando o grau analisado
+          no item (a)).
+   \end{enumerate}
+ 
+\item Sobre certa função $f$ são conhecidos os pontos $(x_k,\,f(x_k))$, com $k=0$, $1$, $2$, \ldots, $n$. Suponha que seja 
+aplicado o Método dos Mínimos Quadrados para determinar a função $\phi(x) = ag_1(x) + bg_2(x)$ que melhor se ajusta a $f$. Deduza que os coeficientes $a$ e 
+$b$ são a solução do sistema de equações:
+$$\begin{cases}
+   c_{11}a + c_{12}b = d_1 \\
+   c_{21}a + c_{22}b = d_2
+  \end{cases},
+$$
+onde $\displaystyle c_{ij} = \sum_{k=0}^n g_i(x_k)g_j(x_k)$ e $\displaystyle d_{i} = \sum_{k=0}^n g_i(x_k)f(x_k)$.
+
+   \item Considere os polinômios:
+   $$p_0(x) = 1;\, p_1(x) = x;\,p_2(x) = \frac{1}{2}(3x^2 - 1).$$
+
+   \begin{enumerate}
+    \item Verifique que $\displaystyle\int_{-1}^1 p_i(x)p_j(x)\,dx = 0$, sempre que $i\neq j$.
+    \item Utilize o Método dos Mínimos Quadrados para determinar $\phi(x) = a_0p_0(x) + a_1p_1(x) + a_2p_2(x)$ que melhor se ajusta a função definida por 
+          $f(x) = \left(x - \dfrac{1}{2}\right)^4$ no intervalo $[-1,\, 1]$.
+   \end{enumerate}
+
+ \item Considere a função definida por $g_k(x)=\sen(k\pi x)$, onde $k\in\mathbb{N}^*$.
+
+   \begin{enumerate}
+    \item Prove que $\displaystyle\int_{-1}^1 g_i(x)g_j(x)\,dx = \begin{cases}1,\,i = j \\ 0,\,i\neq j\end{cases}$.
+    \item Utilize o Método dos Mínimos Quadrados para determinar $\displaystyle \phi(x) = \sum_{k=1}^4 a_kg_k(x)$ que melhor se ajusta a função definida por 
+          $f(x) = x$ no intervalo $[-1;\, 1]$.
+   \end{enumerate}
+  
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} $S(x) = \begin{cases}
+                      0,057952x^3 + 0,20863x^2 + 1,2711x + 0,32509;\,-1,2 \leq x < -0,1 \\
+                      -1,1923x^3 - 0,16645x^2 + 1,2336x + 0,32384;\,-0,1 \leq x < 0,5 \\
+                      0,72404x^3 - 3,0410x^2 + 2,6709x + 0,084291;\,0,5 \leq x \leq 1,4
+                     \end{cases}
+$ 
+\textbf{[2]} (a) Grau $2$. (b) $\phi(x) = 1,3815x^2 - 1,9159x + 0,87686$. 
+\textbf{[3]} Sugestão: Defina $\displaystyle D(a,\,b) = \sum_{i=0}^n \left[f(x_i) - \phi(x_i)\right]^2$. Em seguida, analise o sistema $\begin{cases}\dfrac{\partial D}{\partial a} = 0 \\ \\ \dfrac{\partial D}{\partial b} = 0\end{cases}$. 
+\textbf{[4]} (a) $\displaystyle\int_{-1}^1 p_0(x)p_0(x)\,dx = 2$, $\displaystyle\int_{-1}^1 p_0(x)p_1(x)\,dx = 0$, \\ 
+$\displaystyle\int_{-1}^1 p_0(x)p_2(x)\,dx = 0$,  $\displaystyle\int_{-1}^1 p_1(x)p_1(x)\,dx = \dfrac{2}{3}$, $\displaystyle\int_{-1}^1 p_1(x)p_2(x)\,dx = 0$, $\displaystyle\int_{-1}^1 p_2(x)p_2(x)\,dx = \dfrac{2}{5}$. 
+(b) $\phi(x) = -\dfrac{13}{560} - \dfrac{17}{10}x + \dfrac{33}{14}x^2$. 
+\textbf{[4]} (a) Sugestão: caso $i = j$, use a identidade 
+trigonométrica $\sen^2 \alpha = \dfrac{1}{2}(1 - \cos 2\alpha)$; caso $i\neq j$, 
+use a identidade $\sen \alpha\sen \beta = \dfrac{1}{2}[\cos(\alpha-\beta)-\cos(\alpha+\beta)]$; 
+em ambos os casos, lembre-se que $\sen(k\pi) = 0$ quando $k\in \mathbb{Z}$. 
+(b) $\phi(x) = \dfrac{2}{\pi}\sen\left(\pi x\right) - \dfrac{1}{\pi}\sen\left(2 \pi x\right) + \dfrac{2}{3\pi}\sen\left(3 \, \pi x\right) -\dfrac{1}{2\pi}\sen\left(4\pi x\right)$. 
+\end{document}

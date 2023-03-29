@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+%\usepackage{subfigure}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\newcommand{\sen}{\,\textrm{sen}\,}
+\newcommand{\tg}{\,\textrm{tg}\,}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+\end{tabular} & 
+\begin{tabular}{c}
+Ministério da Educação \\
+Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+Departamento de Ciências Exatas - DCEX \\
+Disciplina: Cálculo Numérico\\
+Prof.: Luiz C. M. de Aquino\\
+\end{tabular} &
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Lista de Exercícios V}
+\end{center}
+
+% \begin{flushleft}
+%  \textbf{Observação}
+% 
+%  Nesta lista de exercícios, todos os sistemas de equações devem ser resolvidos por Eliminação Gaussiana.
+% \end{flushleft}
+
+\begin{enumerate}
+  
+  \item Resolva o sistema abaixo utilizando o Método de Eliminação Gaussiana de duas maneiras: com pivoteamento parcial e sem pivoteamento parcial. Para efetuar todas as operações considere que um dispositivo 
+com quatro casas decimais de precisão foi utilizado. Além disso, considere que este dispositivo efetua o método de arredondamento usual. Compare as 
+soluções obtidas usando este dispositivo com a solução exata deste sistema.
+
+  $$%x = -1, y = 1, z = 2.
+   \begin{cases}
+    3x - 5y + z = -6 \\
+    -x + y + 3z = 8 \\
+    -7x + 3y - 6z = -2
+   \end{cases}
+  $$
+
+  \item Pesquise uma maneira de utilizar o Método de Eliminação Gaussiana para calcular o determinante de uma matriz. Em seguida, use este método para calcular 
+o determinante da matriz:
+$$A=\begin{bmatrix}3 & - 5 & 1 \\ -1 & 1 & 3 \\ -7 & 3 & -6\end{bmatrix}.$$
+
+  \item Considere as matrizes:
+$$A=\begin{bmatrix}1 & - 1 & 2 \\ 3 & 7 & -4 \\ 5 & -2 & 1\end{bmatrix}, \, 
+x=\begin{bmatrix}x_1 \\ x_2 \\ x_3\end{bmatrix}, \, 
+b=\begin{bmatrix}-2 \\ 1 \\ 5\end{bmatrix} \textrm{ e }\,
+c=\begin{bmatrix}1 \\ -1 \\ 3\end{bmatrix}. 
+$$
+
+  \begin{enumerate}
+    \item Determine a fatoração $LU$ de $A$.
+    \item Use a fatoração do item anterior para resolver os sistemas $Ax = b$ e $Ax = c$.
+  \end{enumerate}
+
+  \item Suponha que uma matriz $A$ foi fatorada no formato $LU$. Preencha os espaços em branco abaixo de modo a determinar 
+as matrizes $A$, $L$ e $U$.
+
+$$
+\begin{bmatrix}\square & \square & \square \\ 1 & 0 & \square \\ \square & -4 & -3\end{bmatrix} = 
+\begin{bmatrix}1 & 0 & 0 \\ \square & 1 & 0 \\ -5 & \square & 1\end{bmatrix}
+\begin{bmatrix}-2 & \square & 4 \\ 0 & \square & 3 \\ 0 & 0 & -1\end{bmatrix}
+$$
+
+\end{enumerate}
+
+\begin{center}
+\textbf{Gabarito}
+\end{center} 
+\textbf{[1]} A solução obtida pelo Método da Eliminação Gaussiana com pivoteamento parcial foi mais próxima da solução exata. 
+\textbf{[2]} $\det A = 94$.
+\textbf{[3]} (a) $L = \begin{bmatrix}1 & 0 & 0 \\ 3 & 1 & 0 \\ 5 & \frac{3}{10} & 1\end{bmatrix}$ e 
+$U = \begin{bmatrix} 1 & -1 & 2 \\ 0 & 10 & -10 \\ 0 & 0 & -6 \end{bmatrix}$. 
+(b) $x = 
+\begin{bmatrix}
+\frac{17}{20} \\
+-\frac{29}{20} \\
+-\frac{43}{20}
+\end{bmatrix}
+$. 
+$x = 
+\begin{bmatrix}
+\frac{7}{15} \\
+-\frac{4}{15} \\
+\frac{2}{15}
+\end{bmatrix}
+$. 
+\textbf{[4]} $A = \begin{bmatrix}-2 & 2 & 4 \\ 1 & 0 & 1\\ 10 & -4 & -3\end{bmatrix}$, 
+$L = \begin{bmatrix}1 & 0 & 0 \\ -\frac{1}{2} & 1 & 0 \\ -5 & 6 & 1\end{bmatrix}$ e  
+$U = \begin{bmatrix}-2 & 2 & 4 \\ 0 & 1 & 3 \\ 0 & 0 & -1\end{bmatrix}$
+\end{document}
