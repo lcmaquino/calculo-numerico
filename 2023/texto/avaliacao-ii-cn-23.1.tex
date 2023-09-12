@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \begin{tabular}{c}
+      \includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+    \end{tabular} & 
+    \begin{tabular}{c}
+      Ministério da Educação \\
+      Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+      Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+      Departamento de Ciências Exatas - DCEX \\
+      Disciplina: Cálculo Numérico \quad Semestre: 2022/2\\
+      Prof. Dr. Luiz C. M. de Aquino\\
+      Aluno(a):\rule{6cm}{0.1mm} \quad Data: \rule{0.5cm}{0.1mm}/\rule{0.5cm}{0.1mm}/\rule{1cm}{0.1mm}\\
+    \end{tabular} &
+    \begin{tabular}{c}
+      \includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+    \end{tabular}
+  \end{tabular}
+\end{center}
+
+\begin{center}
+ \textbf{Avaliação II}
+\end{center}
+
+\textbf{Instruções}
+\begin{itemize}
+ \item Todas as justificativas necessárias na solução de cada questão devem 
+ estar presentes nesta avaliação;
+ \item As respostas finais de cada questão devem estar escritas de caneta;
+ \item Esta avaliação tem um total de 35,0 pontos.
+\end{itemize}
+
+\begin{enumerate}
+  \item \textbf{[9,0 pontos]} Suponha que a fatoração $LU$ de uma matriz $A$ seja conhecida.
+  Explique como usar essa informação para resolver o sistema $Ax = b$. 
+
+  \item \textbf{[9,0 pontos]} Arrume o sistema de equações abaixo de modo que ele seja
+  resolvido: pelo método de Gauss-Jacobi; pelo método de Gauss-Seidel.
+
+  $$
+   \begin{cases}
+    30x - 12y + 7z - 9w = 8 \\
+    12x + 48y - 21z + 9w = 56 \\
+    3x + 30y - 105z + 54w = -2 \\
+    12x - 6y - 7z + 27w = 1
+   \end{cases}
+  $$
+
+  \item \textbf{[8,0 pontos]} Seja uma função $f$ da qual são conhecidos os valores descritos na
+  tabela abaixo.
+  %p(x) = 2*x^3 + x^2 - 6
+  \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+      $x_i$ & 1 & 1,5 & 2 & 2,5\\ \hline
+      $f(x_i)$ & $-3$ & 3 & 14 & 31
+    \end{tabular}
+  \end{center}
+
+  Determine o polinômio $p$ que interpola $f$ utilizando duas maneiras:
+  \begin{enumerate}
+   \item escrevendo $p$ na Forma de Lagrange;
+   \item escrevendo $p$ na Forma de Newton.
+  \end{enumerate}
+
+  \item \textbf{[9,0 pontos]} Seja $p$ o polinômio na Forma de Lagrange que interpola os pontos
+  $(x_0,\,y_0)$, $(x_1,\,y_1)$, \ldots, $(x_n,\,y_n)$. Vamos definir o polinômio
+  $$q(x) = \prod_{i=0}^{n} (x-x_i).$$ Prove que $p$ pode ser escrito no seguinte
+  formato: 
+  $$p(x) = \sum_{i=0}^n\frac{q(x)}{(x-x_i)q'(x_i)}y_i.$$
+\end{enumerate}
+
+\end{document}
