@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\DeclareMathOperator{\sen}{sen}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \begin{tabular}{c}
+      \includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+    \end{tabular} & 
+    \begin{tabular}{c}
+      Ministério da Educação \\
+      Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+      Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+      Departamento de Ciências Exatas - DCEX \\
+      Disciplina: Cálculo Numérico \quad Semestre: 2024/1\\
+      Prof. Dr. Luiz C. M. de Aquino\\
+    \end{tabular} &
+    \begin{tabular}{c}
+      \includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+    \end{tabular}
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \textbf{Lista II}
+\end{center}
+
+\begin{enumerate}
+  \item Use o método de Newton para calcular uma solução aproximada das equações abaixo.
+  (Observação: considere uma precisão de $10^{-4}$.)
+  \begin{enumerate}
+    \item $x - \dfrac{1}{4}\sen x = \dfrac{\pi}{3}$
+    \item $3^{-x} - x^2 = x$
+  \end{enumerate}
+  
+  \item Suponha que a temperatura de um certo objeto após $t$ minutos deixado em um certo ambiente
+  seja dada por:
+  $$T(t) = 62e^{\alpha t} + 38$$
+  
+  Use o método de Newton para determinar o valor aproximado de $\alpha$ considerando que $T(10) = 60$.
+  
+\end{enumerate}
+
+\begin{center}
+  \textbf{Gabarito}
+\end{center}
+  \textbf{[1]} 
+  (a) $x\approx 1,28721252248392$ 
+  (b) $x\approx 0,433377193246367$ 
+  \textbf{[2]} $\alpha \approx -0,103609193162839$
+
+\end{document}
