@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{amssymb, amsfonts, amsmath}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.25cm, right=1.25cm]{geometry}
+
+\DeclareMathOperator{\sen}{sen}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  \begin{tabular}{ccc}
+    \begin{tabular}{c}
+      \includegraphics[scale=0.25]{../../biblioteca/imagem/brasao-de-armas-brasil} \\
+    \end{tabular} & 
+    \begin{tabular}{c}
+      Ministério da Educação \\
+      Universidade Federal dos Vales do Jequitinhonha e Mucuri \\
+      Faculdade de Ciências Sociais, Aplicadas e Exatas - FACSAE \\
+      Departamento de Ciências Exatas - DCEX \\
+      Disciplina: Cálculo Numérico \quad Semestre: 2023/2\\
+      Prof. Dr. Luiz C. M. de Aquino\\
+    \end{tabular} &
+    \begin{tabular}{c}
+      \includegraphics[scale=0.25]{../../biblioteca/imagem/logo-ufvjm} \\
+    \end{tabular}
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \textbf{Trabalho II}
+\end{center}
+
+\begin{enumerate}
+   \item Considere uma função $f$ da qual são conhecidos os seguintes pontos:
+
+    \begin{center}
+      \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+        $x_i$ & $-4,2$ & $-2,8$ & $-2,2$ & $-0,75$ & $0$ & $1,2$ & $1,6$ & $3,5$ & $4$ & $5,2$\\ \hline
+        $f(x_i)$ & $24$ & $15,7$ & $8,8$ & $3,6$ & $1,2$ & $0,6$ & $0,25$ & $4,4$ & $8,2$ & $15,5$
+       \end{tabular}
+    \end{center}
+
+    \begin{enumerate}
+      \item Faça um esboço desses pontos no plano cartesiano. A partir desse esboço, 
+      analise qual o grau do polinômio que parece se ajustar a estes pontos.
+      \item Utilize o Método dos Mínimos Quadrados para determinar o polinômio que
+      melhor se ajusta a estes pontos (considerando o grau analisado no item (a)).
+    \end{enumerate}
+
+  \item Utilizando o Método dos Mínimos Quadrados, deseja-se determinar a reta
+  $y = ax + b$ que melhor se ajusta aos pontos $(x_1,\,y_1)$, $(x_2,\,y_2)$, 
+  \ldots, $(x_n,\,y_n)$. Prove que:
+  $$a = \dfrac{\displaystyle n\sum (x_iy_i) - \sum x_i\sum y_i}{\displaystyle n\sum x_i^2 - \left(\sum x_i\right)^2},$$
+  $$b = \dfrac{\displaystyle \sum y_i\sum x_i^2 - \sum x_i\sum (x_iy_i)}{\displaystyle n\sum x_i^2 - \left(\sum x_i\right)^2},$$
+  onde em cada somatório temos $i = 1$, $2$, \ldots, $n$.
+
+  \item Utilizando o Método dos Mínimos Quadrados deseja-se determinar
+  $\displaystyle \phi(x) = \sum_{k=0}^n a_kg_k(x)$ que melhor se ajusta a uma função $f$ no intervalo
+  $[a;\, b]$. Suponha que as funções $g_0$, $g_1$, \ldots, $g_n$ sejam escolhidas de tal forma que
+  $\displaystyle\int_a^b g_i(x)g_j(x)\,dx = \begin{cases}1,\,i = j \\ 0,\,i\neq j\end{cases}$.
+  Prove que nesse caso teremos $a_k = \displaystyle\int_a^b f(x)g_k(x)\,dx$.
+
+  \item Considere a função definida por $g_k(x)=\sen(k\pi x)$, onde $k\in\mathbb{N}$.
+    \begin{enumerate}
+      \item Prove que $\displaystyle\int_{-1}^1 g_i(x)g_j(x)\,dx = \begin{cases}1,\,i = j \\ 0,\,i\neq j\end{cases}$.
+      \item Utilize o Método dos Mínimos Quadrados para determinar $\displaystyle \phi(x) = \sum_{k=1}^4 a_kg_k(x)$
+      que melhor se ajusta a função definida por $f(x) = x$ no intervalo $[-1;\, 1]$.
+   \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
